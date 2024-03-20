@@ -1,145 +1,110 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fique Rico Apenas Com Um CLique</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .banner {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-  }
-  .buttons {
-    text-align: center;
-    margin-top: 20px;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Here Comes The Sun</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
 
- 
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow-y: scroll; /* Enable vertical scrolling */
+            background: linear-gradient(
+                170deg,
+                hsl(126deg 91% 13%) 0%,
+                hsl(108deg 73% 18%) 4%,
+                hsl(96deg 74% 22%) 12%,
+                hsl(87deg 77% 26%) 30%,
+                hsl(80deg 81% 30%) 67%,
+                hsl(74deg 86% 33%) 82%,
+                hsl(68deg 92% 36%) 89%,
+                hsl(64deg 98% 39%) 94%,
+                hsl(59deg 100% 43%) 98%,
+                hsl(55deg 100% 50%) 100%
+            );
+            color: #fff;
+        }
 
-</style>
+        .background-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: -2;
+            text-align: center; /* Center the image horizontally */
+        }
+
+        .background-image {
+          z-index: -2;
+            width: 50%; /* Adjust the width as needed */
+            height: auto; /* Let the height adjust proportionally */
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            z-index: 1; /* Ensure it's above the background image */
+        }
+
+        .fullscreen-image {
+          opacity: 100%;
+            position: fixed; /* Change position to relative */
+            width: 100vw;
+            height: 100vh;
+            z-index: 1; /* Ensure it's above the background image and header */
+        }
+
+        .content {
+          z-index: -3;
+            padding: 600px;
+            text-align: center;
+            color: #fff;
+            margin-top: 220px; /* Adjust to position content below the full-screen image and header */
+        }
+        audio {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 3; /* Ensure it's above other content */
+        }
+    </style>
 </head>
 <body>
 
-   
+    <!-- Header -->
+    <header>
+        <h1>Here Comes The Sun</h1>
+    </header>
 
-<div class="banner">
-  <h1>Como Ficar Milionário</h1>
-</div>
+    <!-- Full Screen Image -->
+    <img class="fullscreen-image" src="https://github.com/JoseLopes67/SiteNovo/blob/main/windows_landscape%20(1).png?raw=true">
+
+    <!-- Content -->
+    <div class="content">
+      <img class="background-image" src="https://github.com/JoseLopes67/SiteNovo/blob/main/sun.png?raw=true">
+    </div>
 
 
-
-<div class="buttons">
-    <img src="https://vidasimples.co/wp-content/uploads/2020/02/money-2724241_1920-1024x692.jpg" alt="250" class= "button" >
-    <p>
-        <style>
-            table {
-              border-collapse: collapse;
-              width: 100%;
-            }
+  <audio controls>
       
-            th,
-            td {
-              text-align: center;
-              padding: 8px;
-            }
-      
-            tr:nth-child(even) {
-              background-color: #d6eeee;
-            }
-          </style>
+    <source src="https://github.com/JoseLopes67/SiteNovo/raw/main/Here%20Comes%20The%20Sun%20(2019%20Mix).mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
 
-        <h1>
-            Tabela dos Ricos
-        </h1>
+    
 
-        <table>
-            <tr>
-                <th>Tempo</th>
-                <th>Dinheiro</th>
-            </tr>
-            <tr>
-                <td>5 horas</td>
-                <td>5.000 $</td>
-            </tr>    
-
-            <tr>
-                <td>10 horas</td>
-                <td>500.000 $</td>
-              </tr>
-
-              <tr>
-                <td>24 horas</td>
-                <td>1.000.000 $</td>
-              </tr>
-
-
-        </table>
-
-
-        <H3> Para ficar milionário apenas tem de escrever aqui alguns dos seus dados</H3>
-
-        <label>Nome Completo:</label>
-    <input type="text" minlength="4" maxlength="8" placeholder="O seu Nome Completo" />
-
-    <label>Numero Cartão de Credito:</label>
-    <input type="text" minlength="4" maxlength="8" placeholder="Numero de cartão" />
-
-    <label>Palavra passe do banco:</label>
-    <input type="palavra passe" />
-    </p>
-
-
-<div class="buttons">
-    <input type="button" value="Enviar Dados" />
-</div>
-
-<h2>
-  Money, Money, Money...
-</h2>
-<audio controls>
-  <source src="Abba - Money, Money, Money (Official Music Video).mp3" type="audio/mpeg">
-  Seu navegador não suporta o elemento de áudio.
-</audio>
-    <p>
-
-    <h1> Para conseguir ganhar o dinheiro e ficar milionário clique em baixo.</h1>
-    </p>
-
-
-
-  <div class="buttons">
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button">Clicar aqui para ganhar muito dinheiro</a>
-    <p></p>
-  </div>  
-    <style>
-        body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    position: relative; /* Importante para o posicionamento correto do rodapé */
-    min-height: 100vh;
-        }
-
-        footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: bottom; /* Posição fixa na parte inferior da janela */
-    bottom: 0;
-    width: 100%;
-  }
-    </style>
-
-<footer>
-    <p>Juro que não roubo nenhum dos vossos dados - © 2024</p>
-  </footer>
 </body>
 </html>
