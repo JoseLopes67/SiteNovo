@@ -1,92 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What is Coming There?</title>
-<style>
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-body {
-    position: relative;
-    background: linear-gradient(
-        170deg,
-        hsl(126deg 91% 13%) 0%,
-        hsl(108deg 73% 18%) 4%,
-        hsl(96deg 74% 22%) 12%,
-        hsl(87deg 77% 26%) 30%,
-        hsl(80deg 81% 30%) 67%,
-        hsl(74deg 86% 33%) 82%,
-        hsl(68deg 92% 36%) 89%,
-        hsl(64deg 98% 39%) 94%,
-        hsl(59deg 100% 43%) 98%,
-        hsl(55deg 100% 50%) 100%
-    );
-    color: #fff;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    z-index: 1;
-}
-
-.fullscreen-image {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    z-index: 1; /* Bring to the back */
-}
-
-.content {
-    width: 100%;
-    min-height: calc(100vh - 40px); /* Subtract header height */
-    padding-top: 40px; /* Adjust to match header height */
-    background-image: url('https://github.com/JoseLopes67/SiteNovo/blob/main/sun.png?raw=true');
-    background-size: 50%; /* Adjust the scale of the background image */
-    background-repeat: no-repeat; /* Prevent background image from repeating */
-    background-position: center; /* Center the background image */
-    overflow-y: auto; /* Enable vertical scrolling within the content */
-}
-
-.audio-container {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 3;
-}
-</style>
-</head>
-<body>
-
-<header>
-    <h1>Here Comes The Sun</h1>
-</header>
-
-<img class="fullscreen-image" src="https://github.com/JoseLopes67/SiteNovo/blob/main/windows_landscape%20(1).png?raw=true">
-
-<div class="content">
-    <!-- Content goes here -->
-    <p style="height: 2000px;"></p>
-</div>
-
-<div class="audio-container">
-    <audio controls>
-        <source src="https://github.com/JoseLopes67/SiteNovo/raw/main/Here%20Comes%20The%20Sun%20(2019%20Mix).mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-</div>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="main" class="lightoff">
+    <div id="container">
+      <img
+        id="myImage"
+        src="https://i.postimg.cc/KjK1wL3c/bulb-off.png"
+        alt=""
+      />
+      <button id="switch">
+        LIGA!
+      </button>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>

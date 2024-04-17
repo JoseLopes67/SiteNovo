@@ -1,0 +1,34 @@
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #container img {
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #container button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  
+  .lightoff {
+    background-color: black;
+    transition: background-color 2s ease-out;
+  }
+  
+  .lighton {
+    background-color: white;
+    transition: background-color 2s ease-out;
+  }
