@@ -109,12 +109,30 @@ animation-delay: 1.3s;
 
 
 
+.home-img{
+
+  
+  position: absolute;
+  top: 10px;
+  left: 80px;
+  max-width: 750px;
+
+}
+
 .home-img .rhombus img{
   position: absolute;
   top: 110px;
-  left: -250px;
+  left: 1000px;
   max-width: 750px;
 
+
+}
+
+.cars-img .cars img{
+
+  position: absolute;
+  left: 1000px;
+  top: 200px;
 }
 
 .btn{
