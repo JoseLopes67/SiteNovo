@@ -70,10 +70,10 @@ font-weight: 600;
 
 }
 
-#container3D canvas{
-  width: 100vw !important;
-  height: 100vh !important;
-  position: absolute;
-  top: 0;
-  left: 0;
+.home-content h1{
+  font-size: 50px;
+  line-height: 1.2;
 }
+
+
+
