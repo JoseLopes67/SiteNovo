@@ -1,34 +1,71 @@
-#main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-  }
-  
-  #container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #container img {
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  #container button {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-  }
-  
-  .lightoff {
-    background-color: black;
-    transition: background-color 2s ease-out;
-  }
-  
-  .lighton {
-    background-color: white;
-    transition: background-color 2s ease-out;
-  }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  background: #eaeaea;
+
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 8%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+
+}
+
+
+.logo{
+font-size: 25px;
+color: #222;
+text-decoration: none;
+font-weight: 600;
+
+
+}
+
+.navbar a{
+  font-size: 18px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 20px;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+
+  color: #1743e3;
+
+}
+
+.social-media a{
+  transition: .3s;
+}
+
+.social-media a:hover{
+  color: #1743e3;
+
+}
+
+.home{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 50px 8% 0;
+
+}
