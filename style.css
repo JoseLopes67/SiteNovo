@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 
 }
 
@@ -131,8 +132,11 @@ animation-delay: 1.3s;
 .cars-img .cars img{
 
   position: absolute;
-  left: 1000px;
-  top: 200px;
+  left: 650px;
+  top: 100px;
+  opacity: 0;
+animation: slideCarRight 1s ease forwards;
+animation-delay: 1.5s;
 }
 
 .btn{
@@ -162,6 +166,19 @@ animation-delay: 1.5s;
 @keyframes slideRight{
   0%{
     transform: translateX(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  
+}
+
+@keyframes slideCarRight{
+  0%{
+    transform: translateX(-1000px);
     opacity: 0;
   }
   100%{

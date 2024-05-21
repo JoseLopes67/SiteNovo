@@ -1,0 +1,287 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background-color: #eaeaea;
+  }
+  .wrapper {
+    position: absolute;
+    width: 90%;
+    max-width: 37em;
+    background-color: #ffffff;
+    padding: 3em 3em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 75%;
+    left: 50%;
+    text-align: center;
+    border-radius: 1em;
+    
+  }
+  .controls-container {
+    background-color: #eaeaea;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+  }
+  #start {
+    font-size: 1.2em;
+    padding: 1em 3em;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 600px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 2s;
+    
+  }
+  #letter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8em 0.4em;
+    justify-content: center;
+    margin-top: 2em;
+  }
+  #letter-container button {
+    background-color: #ffffff;
+    border: 2px solid #7786f5;
+    color: #7786f5;
+    outline: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+    height: 3em;
+    width: 3em;
+  }
+  #letter-container .correct {
+    background-color: #008000;
+    color: #ffffff;
+    border: 2px solid #008000;
+  }
+  #letter-container .incorrect {
+    background-color: #8a8686;
+    color: #ffffff;
+    border: 2px solid #8a8686;
+  }
+  .hint-ref {
+    margin-bottom: 1em;
+  }
+  .hint-ref span {
+    font-weight: 600;
+  }
+  #chanceCount {
+    margin: 1em 0;
+    position: absolute;
+    top: 0.62em;
+    right: 2em;
+  }
+  #word {
+    font-weight: 600;
+    margin: 1em 0 2em 0;
+  }
+  #word span {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .hide {
+    display: none;
+  }
+
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  
+  
+  }
+
+  .logo{
+    font-size: 30px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    
+    
+    }
+    
+    .navbar a{
+      display: inline-block;
+      font-size: 18px;
+      color: #222;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 20px;
+      transition: .3s;
+      opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+    }
+    
+    .navbar a:hover,
+    .navbar a.active{
+    
+      color: #1743e3;
+    
+    }
+    
+    .social-media a{
+      transition: .3s;
+      opacity: 0;
+    animation: slideSci 1s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+    }
+    
+    .social-media a i{
+      font-size: 30px;
+      
+    }
+    
+    .social-media a:hover{
+      color: #1743e3;
+    
+    }
+    
+    .home{
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 50px 8% 0;
+    
+    }
+    
+    .home-content{
+      max-width: 630px;
+    }
+    
+    .home-content h1{
+      font-size: 50px;
+      line-height: 1.2;
+      opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
+    
+    }
+    
+    .home-content h3{
+      font-size: 16px;
+      margin: 15px 0 30px;
+      opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1.3s;
+    }
+    
+    
+    
+    
+    .home-img{
+
+  
+      position: absolute;
+      top: 10px;
+      left: 80px;
+      max-width: 750px;
+    
+    }
+    
+    .home-img .rhombus img{
+      position: absolute;
+      top: 110px;
+      left: 1000px;
+      max-width: 750px;
+    
+    
+    }
+    
+    .cars-img .cars img{
+    
+      position: absolute;
+      left: 600px;
+      top: 100px;
+      opacity: 0;
+    animation: slideCarRight 1s ease forwards;
+    animation-delay: 1.5s;
+    }
+    
+   
+    
+    
+    @keyframes slideRight{
+      0%{
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      100%{
+        transform: translateX(0);
+        opacity: 1;
+      }
+    
+      
+    }
+    
+    @keyframes slideCarRight{
+      0%{
+        transform: translateX(-1000px);
+        opacity: 0;
+      }
+      100%{
+        transform: translateX(0);
+        opacity: 1;
+      }
+    
+      
+    }
+    
+    @keyframes slideTop{
+      0%{
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      100%{
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes slideBottom{
+      0%{
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+      100%{
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes slideSci{
+      0%{
+        transform: translateX(100px);
+        opacity: 0;
+      }
+      100%{
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
