@@ -1,255 +1,223 @@
 
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+
 }
 
-body {
+body{
   background: #eaeaea;
+
 }
 
-.header {
+.header{
   position: fixed;
   top: 0;
-  left: 100;
-  width: 60%;
+  left: 0;
+  width: 100%;
   padding: 30px 8%;
   background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+
+
 }
 
-.logo {
-  font-size: 30px;
-  color: #222;
-  text-decoration: none;
-  font-weight: 600;
-  opacity: 0;
-  animation: slideRight 1s ease forwards;
+
+.logo{
+font-size: 30px;
+color: #222;
+text-decoration: none;
+font-weight: 600;
+opacity: 0;
+animation: slideRight 1s ease forwards;
+
+
 }
 
-.navbar a {
+.navbar a{
   display: inline-block;
   font-size: 18px;
   color: #222;
   text-decoration: none;
   font-weight: 500;
   margin: 0 20px;
-  transition: 0.3s;
+  transition: .3s;
   opacity: 0;
-  animation: slideTop 1s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
+animation: slideTop 1s ease forwards;
+animation-delay: calc(.2s *var(--i));
 }
 
 .navbar a:hover,
-.navbar a.active {
+.navbar a.active{
+
   color: #1743e3;
+
 }
 
-.social-media a {
-  transition: 0.3s;
+.social-media a{
+  transition: .3s;
   opacity: 0;
-  animation: slideSci 1s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
+animation: slideSci 1s ease forwards;
+animation-delay: calc(.2s *var(--i));
 }
 
-.social-media a i {
+.social-media a i{
   font-size: 30px;
+  
 }
 
-.social-media a:hover {
+.social-media a:hover{
   color: #1743e3;
+
 }
 
-.home {
+.home{
   position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   padding: 50px 8% 0;
+
 }
 
-.home-content {
+.home-content{
   max-width: 630px;
 }
 
-.home-content h1 {
+.home-content h1{
   font-size: 50px;
   line-height: 1.2;
   opacity: 0;
-  animation: slideBottom 1s ease forwards;
-  animation-delay: 1s;
+animation: slideBottom 1s ease forwards;
+animation-delay: 1s;
+
 }
 
-.home-content h3 {
+.home-content h3{
   font-size: 16px;
   margin: 15px 0 30px;
   opacity: 0;
-  animation: slideRight 1s ease forwards;
-  animation-delay: 1.3s;
+animation: slideRight 1s ease forwards;
+animation-delay: 1.3s;
 }
 
-.home-img {
+
+
+
+.home-img{
+
+  
   position: absolute;
   top: 10px;
   left: 80px;
   max-width: 750px;
+
 }
 
-.home-img .rhombus img {
+.home-img .rhombus img{
   position: absolute;
   top: 110px;
   left: 1000px;
   max-width: 750px;
+
+
 }
 
-.cars-img .cars img {
+.cars-img .cars img{
+
   position: absolute;
   left: 650px;
   top: 100px;
   opacity: 0;
-  animation: slideCarRight 1s ease forwards;
-  animation-delay: 1.5s;
+animation: slideCarRight 1s ease forwards;
+animation-delay: 1.5s;
 }
 
-.btn {
+.btn{
   display: inline-block;
   padding: 10px 28px;
   background: #1743e3;
   border: 2px solid #1743e3;
   border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,.1); 
   font-size: 16px;
   color: #eaeaea;
   letter-spacing: 1px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s;
+  transition: .3s;
   opacity: 0;
-  animation: slideRight 1s ease forwards;
-  animation-delay: 1.5s;
+animation: slideRight 1s ease forwards;
+animation-delay: 1.5s;
+
 }
 
-.btn:hover {
+.btn:hover{
   background: transparent;
   color: #1743e3;
 }
 
-@keyframes slideRight {
-  0% {
+@keyframes slideRight{
+  0%{
     transform: translateX(-100px);
     opacity: 0;
   }
-  100% {
+  100%{
     transform: translateX(0);
     opacity: 1;
   }
+
+  
 }
 
-@keyframes slideCarRight {
-  0% {
+@keyframes slideCarRight{
+  0%{
     transform: translateX(-1000px);
     opacity: 0;
   }
-  100% {
+  100%{
     transform: translateX(0);
     opacity: 1;
   }
+
+  
 }
 
-@keyframes slideTop {
-  0% {
+@keyframes slideTop{
+  0%{
     transform: translateY(100px);
     opacity: 0;
   }
-  100% {
+  100%{
     transform: translateY(0);
     opacity: 1;
   }
 }
 
-@keyframes slideBottom {
-  0% {
+@keyframes slideBottom{
+  0%{
     transform: translateY(-100px);
     opacity: 0;
   }
-  100% {
+  100%{
     transform: translateY(0);
     opacity: 1;
   }
 }
 
-@keyframes slideSci {
-  0% {
+@keyframes slideSci{
+  0%{
     transform: translateX(100px);
     opacity: 0;
   }
-  100% {
+  100%{
     transform: translateX(0);
     opacity: 1;
-  }
-}
-
-/* Media Queries para dispositivos móveis */
-@media (max-width: 768px) {
-  .header {
-    padding: 20px 5%;
-  }
-
-  .logo {
-    font-size: 24px;
-  }
-
-  .navbar a {
-    display: inline-block;
-    font-size: 16px;
-    margin: 0 100px;
-    
-  }
-
-  .social-media a i {
-    font-size: 24px;
-  }
-
-  .home {
-    flex-direction: column;
-    padding: 20px 5%;
-    height: auto;
-  }
-
-  .home-content h1 {
-    font-size: 36px;
-    line-height: 1.2;
-  }
-
-  .home-content h3 {
-    font-size: 14px;
-  }
-
-  .home-img {
-    position: relative;
-    top: 110px;
-    left: auto;
-    max-width: 100%;
-    margin-top: 20px;
-  }
-
-  .home-img .rhombus img,
-  .cars-img .cars img {
-    position: relative;
-    top: auto;
-    left: auto;
-    max-width: 100%;
-    animation: none;
-  }
-
-  .btn {
-    font-size: 14px;
-    padding: 8px 20px;
   }
 }
