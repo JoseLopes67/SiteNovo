@@ -3,7 +3,7 @@
 const options = {
   "Ferrari": {
     hint: "Marca de carros desportivos italiana",
-    image: "/images/ferrari-488-pista-main.png"
+    image: "/images/ferrari-488-pista-main.png" 
   },
   "Bentley": {
     hint: "Marca de carros de luxo inglesa",
@@ -51,6 +51,7 @@ const options = {
   },
 
 };
+
 
 
 
