@@ -43,10 +43,10 @@ body {
   border-radius: 2em;
   cursor: pointer;
   position: absolute;
-  top: 850px;
+  top: 800px;
   opacity: 0;
   animation: slideBottom 1s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 /* Contêiner de letras */
@@ -254,7 +254,7 @@ body {
   #start {
     font-size: 1em;
     padding: 0.8em 2em;
-    top: 850px; /* Ajusta a posição do botão */
+    top: 800px; /* Ajusta a posição do botão */
   }
 
   .header {

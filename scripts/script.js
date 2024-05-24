@@ -3,60 +3,59 @@
 const options = {
   "Ferrari": {
     hint: "Marca de carros desportivos italiana",
-    image: "/images/ferrari-488-pista-main.png" 
+    image: "https://res.cloudinary.com/unix-center/image/upload/c_lfill,dpr_3.0,f_auto,fl_progressive,g_center,h_108,q_auto:good,w_270/v1478980623/xr82bubcz2o9qxwsegyt.png" 
   },
   "Bentley": {
     hint: "Marca de carros de luxo inglesa",
-    image: "/images/Bentley.png"
+    image: "https://picolio.auto123.com/15photo/bentley/2015-bentley-mulsanne_1.png"
   },
   "Porsche": {
     hint: "Marca de carros desportivos alemã",
-    image: "/images/Gt3.png"
+    image: "https://cut-images.roadster.com/evox/color_1280_001_png/14871/14871_cc1280_001_0L.png"
   },
   "AstonMartin": {
     hint: "Marca de carros de desportivos inglesa",
-    image: "/images/AstonMartin.png"
+    image: "https://img.sm360.ca/ir/w600h340c/images/newcar/ca/2023/aston-martin/dbs-coupe/base-dbs/coupe/exteriorColors/2023_aston-martin_dbs-coupe_001_c47.png"
   },
   "BMW": {
     hint: "Marca de carros de desportivos Alemã",
-    image: "/images/BMW.png"
-  },
+    image: "https://picolio.auto123.com/17photo/bmw/2017-bmw-m3.png",
   "Audi": {
     hint: "Marca de carros Alemã",
-    image: "/images/Audi.png"
+    image: "https://bluesky-cogcms-prodb.cdn.imgeng.in/media/f2tnxydx/rs6-avant.png"
   },
   "Ford": {
     hint: "Marca de carros dos EUA",
-    image: "/images/Mustang.png"
+    image: "https://static.tcimg.net/vehicles/primary/d79aab180bfdcad5/2024-Ford-Mustang-silver-full_color-driver_side_profile.png"
   },
   "Mercedes": {
     hint: "Marca de carros de semi-luxo Alemã",
-    image: "/images/Mercedes.png"
+    image: "https://www.dursun-limousine.ch/media/cache/61794a5e502502e381ffc10fb653f8e2fd0d88b0.png"
   },
   "Toyota": {
     hint: "Marca de carros japonesa",
-    image: "/images/Supra.png"
+    image: "https://media.dealervenom.com/jellies/Toyota/GR%20Supra/C446076_D13_Side.png?auto=compress%2Cformat"
   },
   "Peugeot": {
     hint: "Marca de carros mais antiga",
-    image: "/images/Peugeot.png"
+    image: "https://getrentacar.com/storage/cache/images/470-246-75-fit-187953.webp"
   },
   "McLaren": {
     hint: "Marca de carros de super-desportivos inglesa",
-    image: "/images/mclaren-570s_main.png"
+    image: "https://platform.cstatic-images.com/xlarge/in/v2/stock_photos/25690e95-ccd6-4f80-bb0e-f0e2011bad2f/6e1daf72-92eb-41f8-9d78-df2c892974af.png"
   },
   "Nissan": {
     hint: "Marca de carros de japonesa",
-    image: "/images/GTR_Nismo.png"
+    image: "https://media.assets.ansira.net/websites/content/cblt-ms-nissan/about_messages/68c346c6f09d42139a899530e93da30c_c2x0-596x337.png"
   },
 
-};
+  }
 
 
 
 
 
-
+}
 const message = document.getElementById("message");
 const hintRef = document.querySelector(".hint-ref");
 const controls = document.getElementById("controls");
