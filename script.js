@@ -1,13 +1,61 @@
 
 
 const options = {
-  "Ferrari": "Marca de carros esportivos italiana",
-  "Lamborghini": "Marca de carros esportivos italiana conhecida por seu design agressivo",
-  "Porsche": "Marca de carros esportivos alemã",
-  "Bugatti": "Marca de carros superesportivos francesa"
+  "Ferrari": {
+    hint: "Marca de carros desportivos italiana",
+    image: "/images/ferrari-488-pista-main.png"
+  },
+  "Bentley": {
+    hint: "Marca de carros de luxo inglesa",
+    image: "/images/Bentley.png"
+  },
+  "Porsche": {
+    hint: "Marca de carros desportivos alemã",
+    image: "/images/Gt3.png"
+  },
+  "AstonMartin": {
+    hint: "Marca de carros de desportivos inglesa",
+    image: "/images/AstonMartin.png"
+  },
+  "BMW": {
+    hint: "Marca de carros de desportivos Alemã",
+    image: "/images/BMW.png"
+  },
+  "Audi": {
+    hint: "Marca de carros Alemã",
+    image: "/images/Audi.png"
+  },
+  "Ford": {
+    hint: "Marca de carros dos EUA",
+    image: "/images/Mustang.png"
+  },
+  "Mercedes": {
+    hint: "Marca de carros de semi-luxo Alemã",
+    image: "/images/Mercedes.png"
+  },
+  "Toyota": {
+    hint: "Marca de carros japonesa",
+    image: "/images/Supra.png"
+  },
+  "Peugeot": {
+    hint: "Marca de carros mais antiga",
+    image: "/images/Peugeot.png"
+  },
+  "McLaren": {
+    hint: "Marca de carros de super-desportivos inglesa",
+    image: "/images/mclaren-570s_main.png"
+  },
+  "Nissan": {
+    hint: "Marca de carros de japonesa",
+    image: "/images/GTR_Nismo.png"
+  },
+
 };
 
-// Initial References
+
+
+
+
 const message = document.getElementById("message");
 const hintRef = document.querySelector(".hint-ref");
 const controls = document.getElementById("controls");
@@ -17,8 +65,9 @@ const userInpSection = document.getElementById("user-input-section");
 const resultText = document.getElementById("result");
 const word = document.getElementById("word");
 const words = Object.keys(options);
-let randomWord = "", randomHint = "";
+let randomWord = "", randomHint = "", randomImage = "";
 let winCount = 0, lossCount = 0;
+let usedWords = [];
 
 // Generate random value
 const generateRandomValue = (array) => Math.floor(Math.random() * array.length);
@@ -45,9 +94,29 @@ const stopGame = () => {
 const generateWord = () => {
   letterContainer.classList.remove("hide");
   userInpSection.innerText = "";
-  randomWord = words[generateRandomValue(words)];
-  randomHint = options[randomWord];
-  hintRef.innerHTML = `<div id="wordHint"><span>Hint: </span>${randomHint}</div>`;
+
+  // Reset used words if all words have been used
+  if (usedWords.length === words.length) {
+    usedWords = [];
+  }
+
+  // Select a new word that hasn't been used yet
+  let randomIndex;
+  do {
+    randomIndex = generateRandomValue(words);
+  } while (usedWords.includes(randomIndex));
+
+  usedWords.push(randomIndex);
+  randomWord = words[randomIndex];
+  const randomOption = options[randomWord];
+  randomHint = randomOption.hint;
+  randomImage = randomOption.image;
+
+  hintRef.innerHTML = `
+    <div id="wordHint"><span>Hint: </span>${randomHint}</div>
+    <div id="wordImage"><img src="${randomImage}" alt="Imagem de ${randomWord}" /></div>
+  `;
+
   let displayItem = "";
   randomWord.split("").forEach((value) => {
     displayItem += '<span class="inputSpace">_ </span>';
@@ -98,8 +167,8 @@ const init = () => {
             winCount += 1;
             // If winCount equals word length
             if (winCount == charArray.length) {
-              resultText.innerHTML = "You Won";
-              startBtn.innerText = "Restart";
+              
+              startBtn.innerText = "Next car!";
               // block all buttons
               blocker();
             }
