@@ -1,287 +1,303 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+body {
+  background-color: #eaeaea;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Wrapper com tamanho fixo */
+.wrapper {
+  position: absolute;
+  width: 50em; /* largura fixa */
+  height: 50vh; /* altura fixa */
+  background-color: #ffffff;
+  padding: 2em; /* padding ajustado */
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  border-radius: 1em;
+  overflow-y: auto;
+}
+
+/* Contêiner de controles */
+.controls-container {
+  background-color: #eaeaea;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+}
+
+/* Botão iniciar */
+#start {
+  font-size: 1.2em;
+  padding: 1em 3em;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 2em;
+  cursor: pointer;
+  position: absolute;
+  top: 850px;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 2s;
+}
+
+/* Contêiner de letras */
+#letter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em 0.4em;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+#letter-container button {
+  background-color: #ffffff;
+  border: 2px solid #7786f5;
+  color: #7786f5;
+  outline: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+  height: 3em;
+  width: 3em;
+}
+
+#letter-container .correct {
+  background-color: #008000;
+  color: #ffffff;
+  border: 2px solid #008000;
+}
+
+#letter-container .incorrect {
+  background-color: #8a8686;
+  color: #ffffff;
+  border: 2px solid #8a8686;
+}
+
+.hint-ref {
+  margin-bottom: 1em;
+}
+
+.hint-ref span {
+  font-weight: 600;
+}
+
+#chanceCount {
+  margin: 1em 0;
+  position: absolute;
+  top: 0.62em;
+  right: 2em;
+}
+
+#word {
+  font-weight: 600;
+  margin: 1em 0 2em 0;
+}
+
+#word span {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.hide {
+  display: none;
+}
+
+/* Header ajustado */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75%;
+  padding: 30px 8%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 30px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+  display: inline-block;
+  font-size: 18px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 20px;
+  transition: 0.3s;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #1743e3;
+}
+
+.social-media a {
+  transition: 0.3s;
+  opacity: 0;
+  animation: slideSci 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.social-media a i {
+  font-size: 30px;
+}
+
+.social-media a:hover {
+  color: #1743e3;
+}
+
+#wordImage {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#wordImage img {
+  width: 100%; /* Ajusta a largura para 100% da largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  max-height: 400px; /* Define a altura máxima desejada */
+}
+
+/* Imagens dos carros com tamanho fixo */
+.cars-img img {
+  width: 300px; /* Define uma largura fixa */
+  height: 200px; /* Define uma altura fixa */
+  object-fit: cover; /* Mantém a proporção e cobre o contêiner */
+}
+
+/* Animações */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
   }
-  body {
-    background-color: #eaeaea;
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
+}
+
+@keyframes slideCarRight {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideSci {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
   .wrapper {
-    position: absolute;
-    width: 90%;
-    max-width: 37em;
-    background-color: #ffffff;
-    padding: 3em 3em;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 75%;
-    left: 50%;
-    text-align: center;
-    border-radius: 1em;
-    
+    width: 80vw; /* 90% da largura da viewport */
+    height: 55vh; /* Altura fixa */
+    max-width: none; /* Remove a largura máxima */
+    padding: 1em; /* Padding ajustado */
+    border-radius: 0.5em;
+    top: 500px;
   }
-  .controls-container {
-    background-color: #eaeaea;
-    position: absolute;
-    width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    top: 0;
-  }
+
   #start {
-    font-size: 1.2em;
-    padding: 1em 3em;
-    background-color: #ffffff;
-    border: none;
-    outline: none;
-    border-radius: 2em;
-    cursor: pointer;
-    position: absolute;
-    top: 600px;
-    opacity: 0;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: 2s;
-    
+    font-size: 1em;
+    padding: 0.8em 2em;
+    top: 850px; /* Ajusta a posição do botão */
   }
-  #letter-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8em 0.4em;
-    justify-content: center;
-    margin-top: 2em;
+
+  .header {
+    padding: 20px 5%;
   }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+
+  .social-media a i {
+    font-size: 24px;
+  }
+
   #letter-container button {
-    background-color: #ffffff;
-    border: 2px solid #7786f5;
-    color: #7786f5;
-    outline: none;
-    border-radius: 0.3em;
-    cursor: pointer;
-    height: 3em;
-    width: 3em;
-  }
-  #letter-container .correct {
-    background-color: #008000;
-    color: #ffffff;
-    border: 2px solid #008000;
-  }
-  #letter-container .incorrect {
-    background-color: #8a8686;
-    color: #ffffff;
-    border: 2px solid #8a8686;
-  }
-  .hint-ref {
-    margin-bottom: 1em;
-  }
-  .hint-ref span {
-    font-weight: 600;
-  }
-  #chanceCount {
-    margin: 1em 0;
-    position: absolute;
-    top: 0.62em;
-    right: 2em;
-  }
-  #word {
-    font-weight: 600;
-    margin: 1em 0 2em 0;
-  }
-  #word span {
-    text-transform: uppercase;
-    font-weight: 400;
-  }
-  .hide {
-    display: none;
+    height: 2.5em;
+    width: 2.5em;
   }
 
-  .header{
-    position: fixed;
-    top: 0;
-    left: 0;
+  #wordImage img {
     width: 100%;
-    padding: 30px 8%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-  
-  
+    max-height: 300px; /* Altura máxima ajustada */
   }
 
-  .logo{
-    font-size: 30px;
-    color: #222;
-    text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    
-    
-    }
-    
-    .navbar a{
-      display: inline-block;
-      font-size: 18px;
-      color: #222;
-      text-decoration: none;
-      font-weight: 500;
-      margin: 0 20px;
-      transition: .3s;
-      opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: calc(.2s *var(--i));
-    }
-    
-    .navbar a:hover,
-    .navbar a.active{
-    
-      color: #1743e3;
-    
-    }
-    
-    .social-media a{
-      transition: .3s;
-      opacity: 0;
-    animation: slideSci 1s ease forwards;
-    animation-delay: calc(.2s *var(--i));
-    }
-    
-    .social-media a i{
-      font-size: 30px;
-      
-    }
-    
-    .social-media a:hover{
-      color: #1743e3;
-    
-    }
-    
-    .home{
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 50px 8% 0;
-    
-    }
-    
-    .home-content{
-      max-width: 630px;
-    }
-    
-    .home-content h1{
-      font-size: 50px;
-      line-height: 1.2;
-      opacity: 0;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: 1s;
-    
-    }
-    
-    .home-content h3{
-      font-size: 16px;
-      margin: 15px 0 30px;
-      opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 1.3s;
-    }
-    
-    
-    
-    
-    .home-img{
+  #chanceCount {
+    top: 0.4em;
+    right: 1em;
+    position: static; /* Remove a posição absoluta */
+    margin-top: 1em; /* Adiciona uma margem superior */
+  }
 
-  
-      position: absolute;
-      top: 10px;
-      left: 80px;
-      max-width: 750px;
-    
-    }
-    
-    .home-img .rhombus img{
-      position: absolute;
-      top: 110px;
-      left: 1000px;
-      max-width: 750px;
-    
-    
-    }
-    
-    .cars-img .cars img{
-    
-      position: absolute;
-      left: 600px;
-      top: 100px;
-      opacity: 0;
-    animation: slideCarRight 1s ease forwards;
-    animation-delay: 1.5s;
-    }
-    
-   
-    
-    
-    @keyframes slideRight{
-      0%{
-        transform: translateX(-100px);
-        opacity: 0;
-      }
-      100%{
-        transform: translateX(0);
-        opacity: 1;
-      }
-    
-      
-    }
-    
-    @keyframes slideCarRight{
-      0%{
-        transform: translateX(-1000px);
-        opacity: 0;
-      }
-      100%{
-        transform: translateX(0);
-        opacity: 1;
-      }
-    
-      
-    }
-    
-    @keyframes slideTop{
-      0%{
-        transform: translateY(100px);
-        opacity: 0;
-      }
-      100%{
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-    
-    @keyframes slideBottom{
-      0%{
-        transform: translateY(-100px);
-        opacity: 0;
-      }
-      100%{
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-    
-    @keyframes slideSci{
-      0%{
-        transform: translateX(100px);
-        opacity: 0;
-      }
-      100%{
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
+  .hint-ref {
+    margin-bottom: 2em; /* Adiciona mais espaço inferior */
+    margin-top: 1em; /* Adiciona uma margem superior */
+  }
+
+  .cars-img img {
+    width: 250px; /* Define uma largura fixa menor para dispositivos móveis */
+    height: 150px; /* Define uma altura fixa menor para dispositivos móveis */
+  }
+}
